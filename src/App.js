@@ -10,6 +10,7 @@ import Footer from "./pages/Shared/Footer/Footer";
 import RequireAuth from "./pages/Login/RequireAuth/RequireAuth";
 import CheckOut from "./pages/Checkout/CheckOut";
 import Blog from "./pages/Blog/Blog";
+import About from "./pages/About/About";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
