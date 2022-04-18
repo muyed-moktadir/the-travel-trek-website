@@ -1,7 +1,7 @@
 # The Travel Trek Website
 
 [Github link](https://github.com/programming-hero-web-course-4/independent-service-provider-muyed-moktadir).
-[live link](https://starlit-melomakarona-1635ec.netlify.app/).
+[live link](https://travel-trek-e5c58.web.app/).
 
 ## ` What i have done in my project`
 * in homepage there is a website name with quotes with a Banner and 6 travel packages
