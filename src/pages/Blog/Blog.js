@@ -14,7 +14,7 @@ const Blog = () => {
                 </p>
             </div>
             <div  className='blog-summary'>
-                <h1>What is Symentic Tag?</h1>
+                <h1> Why are you using firebase? What other options do you have to implement authentication?</h1>
                 <p align="justify">Firebase is a Backend-as-a-Service (BaaS),which is a platform by Google that provides functionalities and helps with the backend development of  Android, iOS, or web and support Unity3D too.Firebase Database,Firebase Cloud Storage,Firebase Cloud Messaging,Firebase Remote Config are the best feature.
                 The best part is that Firebase has all the features that helped my apps to grow to the next level.
                 

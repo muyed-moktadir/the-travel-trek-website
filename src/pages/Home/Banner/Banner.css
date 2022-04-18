@@ -7,6 +7,9 @@
     margin-top: 100px;
 }
 
+.banner-container img{
+    width: 730px;
+}
 .banner-container h1{
     font-size: 50px;
     color: tomato;
@@ -14,4 +17,37 @@
 
 .banner-container p{
     font-size: 25px;
+}
+
+/* TODO:   responsive  */
+@media screen and (max-width:600px) {
+    .home-section{
+        width: 100%;
+    }
+    .banner-container{
+        display: grid;
+        grid-template-columns:repeat(1 , 1fr);
+        width: 100%;
+
+    }
+    .banner-container img{
+        width: 100%;
+        margin: 0%;
+    }
+    
+    .banner-container h1{
+        font-size:auto;
+    }
+    
+    .banner-container p{
+        font-size: auto;
+    }
+    .banner-container{
+        grid-template-columns: repeat(1,2fr);
+        /* justify-content: center; */
+        justify-items: center;
+        width: auto;
+        height: auto;
+
+    }    
 }

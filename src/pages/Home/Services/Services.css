@@ -17,8 +17,8 @@
     border-radius: 8px;
   } */
   
-  /* @media screen and (max-width: 600px) {
-    .review-all-books {
+  @media screen and (max-width: 600px) {
+    .services-container {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       justify-items: center;
@@ -27,4 +27,4 @@
     .header{
       width: auto;
   }
-  } */
+  }
