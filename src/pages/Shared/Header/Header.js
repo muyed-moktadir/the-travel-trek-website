@@ -12,7 +12,7 @@ const Header = () => {
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/services">Services</CustomLink>
         <CustomLink to="/blog">Blog</CustomLink>
-        <CustomLink to="about">About</CustomLink>
+        <CustomLink to="/about">About</CustomLink>
         {
           user?.uid ? (
             <button onClick={() => signOut(auth)}>sign Out</button>
