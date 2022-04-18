@@ -1,0 +1,18 @@
+.banner-container{
+    display: grid;
+    grid-template-columns:4fr 1fr;
+    align-items: center;
+    gap: 50px;
+    /* gap: 30px;
+    align-items: center;
+    margin: 20px; */
+}
+
+.banner-container h1{
+    font-size: 50px;
+    color: tomato;
+}
+
+.banner-container p{
+    font-size: 25px;
+}
