@@ -12,6 +12,9 @@ const {img,price,name,about}=service;
                 <p>Package: {about.length > 20? about.slice(0,150) +'...': about}</p>
                 <h3>price : ${price}</h3>
             </div>
+            <div className='btn-container'>
+            <button className='btn'><p>Book Now</p></button>
+            </div>
         </div>
     );
 };
