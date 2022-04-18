@@ -6,4 +6,6 @@ nav{
     background-color: burlywood;
     height: 80px;
     width: 100%;
+    position: fixed;
+    top: 0%;
    }
