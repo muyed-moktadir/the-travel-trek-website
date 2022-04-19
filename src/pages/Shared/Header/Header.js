@@ -15,7 +15,7 @@ const Header = () => {
         <CustomLink to="/about">About</CustomLink>
         {
           user?.uid ? (
-            <button onClick={() => signOut(auth)}>sign Out</button>
+            <button className="signout-btn" onClick={() => signOut(auth)}>sign Out</button>
           ) : (
             <CustomLink to="/login">Login</CustomLink>
           )  // <CustomLink to='/register'>register</CustomLink>

@@ -52,3 +52,13 @@
     color: #FF9900;
     text-decoration: none;
 }
+
+.reset-btn{
+    width: 35%;
+    height: 25px;
+    background-color: rgba(33, 134, 185, 0.3);
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}

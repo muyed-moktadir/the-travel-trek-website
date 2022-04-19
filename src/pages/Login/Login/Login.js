@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import "./Login.css";
 import auth from "../../../firebase.init";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -10,9 +15,12 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
+  let errorElement;
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
   const handleEmailBlur = (event) => {
     setEmail(event.target.value);
@@ -31,6 +39,12 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
   };
 
+  const resetEmail = (event) => {
+    event.preventDefault();
+    sendPasswordResetEmail(email);
+    toast("Mail sent");
+  };
+
   return (
     <div className="form-container">
       <div>
@@ -41,6 +55,7 @@ const Login = () => {
               Enter Your Email-Address
             </label>
             <input
+              style={{ fontSize: "18px" }}
               onBlur={handleEmailBlur}
               type="email"
               name="email"
@@ -52,12 +67,14 @@ const Login = () => {
               Enter Your Password
             </label>
             <input
+              style={{ fontSize: "18px" }}
               onBlur={handlePasswordBlur}
               type="password"
               name="password"
               required
             />
           </div>
+          {errorElement}
           <p style={{ color: "red" }}>{error?.message}</p>
           {loading && <p>Loading...</p>}
           <input className="form-submit" type="submit" value="Login" />
@@ -67,6 +84,13 @@ const Login = () => {
           <Link className="form-link" to="/register">
             Create an account
           </Link>
+          <p>
+            forgot password?{" "}
+            <button className="reset-btn" onClick={resetEmail}>
+              reset password
+            </button>
+            <ToastContainer></ToastContainer>
+          </p>
         </p>
       </div>
     </div>
